@@ -76,13 +76,13 @@
 	}
 	.section01 .img{
 		float: left;
-		margin-left: 40px;
+		margin-left: 45px;
 		width:120px ;
 		height:150px ;
 		background-image:url(../image/pic01.jpg) ;
 	}
 	.backtitle hr{
-		width: 370px;
+		width: 365px;
 		border: 1px #000 solid;
 	}
 	.backtitle .back{
