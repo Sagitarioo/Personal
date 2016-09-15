@@ -31,7 +31,6 @@
 		display: block;
 		float: left;
 		width: 1000px;
-		height: 200px;
 	}
 	.backtitle hr{
 		width: 810px;
@@ -47,38 +46,9 @@
 	    text-align: center;
 	    font-size: 22px;
 	}
-	.section03{
-		display: block;
-		float: left;
-		width: 1000px;
-		height: 230px;
-	}
-	.section04{
-		display: block;
-		float: left;
-		width: 1000px;
-		height: 140px;
-	}
-	.section05{
-		display: block;
-		float: left;
-		width: 1000px;
-		height: 150px;
-	}
-	.section06{
-		display: block;
-		float: left;
-		width: 1000px;
-		height: 140px;
-	}
-	.section07{
-		display: block;
-		float: left;
-		width: 1000px;
-		height: 140px;
-	}
 	.context{
-		font-family: "microwsoft yahei";
+		font-family: "Microwsoft yahei";
+		padding-bottom: 50px;
 	}
 }
 
@@ -91,12 +61,11 @@
 		padding-top: 20px;
 		padding-left: 5px;
 		font-size: 12px;
-		width: 400px;
+		width: 380px;
 	}
 	.section01{
 		display: block;
-		width: 390px;
-		
+		width: 370px;
 	}
 	.section01 .header{
 		float: left;
@@ -107,14 +76,13 @@
 	}
 	.section01 .img{
 		float: left;
-		margin-left: 50px;
+		margin-left: 40px;
 		width:120px ;
 		height:150px ;
 		background-image:url(../image/pic01.jpg) ;
-
 	}
 	.backtitle hr{
-		width: 390px;
+		width: 370px;
 		border: 1px #000 solid;
 	}
 	.backtitle .back{
@@ -130,32 +98,7 @@
 	.section02{
 		display: block;
 		float: left;
-		width: 390px;
-	}
-	.section03{
-		display: block;
-		float: left;
-		width: 390px;
-	}
-	.section04{
-		display: block;
-		float: left;
-		width: 390px;
-	}
-	.section05{
-		display: block;
-		float: left;
-		width: 390px;
-	}
-	.section06{
-		display: block;
-		float: left;
-		width: 390px;
-	}
-	.section07{
-		display: block;
-		float: left;
-		width: 390px;
+		width: 370px;
 	}
 	.context{
 		font-family: "microwsoft yahei";
