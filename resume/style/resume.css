@@ -99,6 +99,7 @@
 	}
 	.section01 .header{
 		float: left;
+		font-size: 12px;
 	}
 	.section01 .header span{
 		font-size: 20px;
@@ -111,14 +112,8 @@
 		background-image:url(../image/pic01.jpg) ;
 
 	}
-	.section02{
-		display: block;
-		float: left;
-		width: 420px;
-		
-	}
 	.backtitle hr{
-		width: 360px;
+		width: 420px;
 		border: 1px #000 solid;
 	}
 	.backtitle .back{
@@ -131,38 +126,39 @@
 	    text-align: center;
 	    font-size: 18px;
 	}
+	.section02{
+		display: block;
+		float: left;
+		width: 420px;
+	}
 	.section03{
 		display: block;
 		float: left;
 		width: 420px;
-		
 	}
 	.section04{
 		display: block;
 		float: left;
 		width: 420px;
-		
 	}
 	.section05{
 		display: block;
 		float: left;
 		width: 420px;
-		
 	}
 	.section06{
 		display: block;
 		float: left;
 		width: 420px;
-		
 	}
 	.section07{
 		display: block;
 		float: left;
 		width: 420px;
-		
 	}
 	.context{
 		font-family: "microwsoft yahei";
 		padding-bottom: 20px;
+		font-size: 12px;
 	}
 }	
