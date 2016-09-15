@@ -105,7 +105,7 @@
 	}
 	.section01 .img{
 		float: left;
-		margin-left: 70px;
+		margin-left: 60px;
 		width:120px ;
 		height:160px ;
 		background-image:url(../image/pic01.jpg) ;
@@ -115,10 +115,10 @@
 		display: block;
 		float: left;
 		width: 345px;
-		height: 170px;
+		
 	}
 	.backtitle hr{
-		width: 400px;
+		width: 360px;
 		border: 1px #000 solid;
 	}
 	.backtitle .back{
@@ -135,33 +135,34 @@
 		display: block;
 		float: left;
 		width: 460px;
-		height: 160px;
+		
 	}
 	.section04{
 		display: block;
 		float: left;
 		width: 460px;
-		height: 90px;
+		
 	}
 	.section05{
 		display: block;
 		float: left;
 		width: 460px;
-		height: 110px;
+		
 	}
 	.section06{
 		display: block;
 		float: left;
 		width: 460px;
-		height: 90px;
+		
 	}
 	.section07{
 		display: block;
 		float: left;
 		width: 460px;
-		height: 120px;
+		
 	}
 	.context{
 		font-family: "microwsoft yahei";
+		padding-bottom: 20px;
 	}
 }	
