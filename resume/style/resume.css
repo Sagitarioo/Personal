@@ -94,7 +94,7 @@
 	}
 	.section01{
 		display: block;
-		width: 480px;
+		width: 460px;
 		height: 200px;
 	}
 	.section01 .header{
@@ -114,11 +114,11 @@
 	.section02{
 		display: block;
 		float: left;
-		width: 1000px;
+		width: 460px;
 		height: 200px;
 	}
 	.backtitle hr{
-		width: 810px;
+		width: 410px;
 		border: 1px #000 solid;
 	}
 	.backtitle .back{
@@ -134,31 +134,31 @@
 	.section03{
 		display: block;
 		float: left;
-		width: 1000px;
+		width: 460px;
 		height: 230px;
 	}
 	.section04{
 		display: block;
 		float: left;
-		width: 1000px;
+		width: 460px;
 		height: 140px;
 	}
 	.section05{
 		display: block;
 		float: left;
-		width: 1000px;
+		width: 460px;
 		height: 150px;
 	}
 	.section06{
 		display: block;
 		float: left;
-		width: 1000px;
+		width: 460px;
 		height: 140px;
 	}
 	.section07{
 		display: block;
 		float: left;
-		width: 1000px;
+		width: 460px;
 		height: 140px;
 	}
 	.context{
