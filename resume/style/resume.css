@@ -50,6 +50,10 @@
 		font-family: "Microwsoft yahei";
 		padding-bottom: 50px;
 	}
+	.context a{
+		text-decoration: none;
+		color: #000;
+	}
 }
 
 @media screen and (max-width: 480px){
@@ -104,5 +108,9 @@
 		font-family: "microwsoft yahei";
 		padding-bottom: 20px;
 		font-size: 12px;
+	}
+	.context a{
+		text-decoration: none;
+		color: #000;
 	}
 }	
