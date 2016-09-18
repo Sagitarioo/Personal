@@ -24,8 +24,8 @@
 		margin-left: 400px;
 		width:120px ;
 		height:160px ;
-		background-image:url(../image/pic01.jpg) ;
-
+		background-image:url(../image/pic02.jpg) ;
+		background-size:cover;
 	}
 	.section02{
 		display: block;
@@ -83,7 +83,8 @@
 		margin-left: 45px;
 		width:120px ;
 		height:150px ;
-		background-image:url(../image/pic01.jpg) ;
+		background-image:url(../image/pic02.jpg) ;
+		background-size:cover;
 	}
 	.backtitle hr{
 		width: 365px;
