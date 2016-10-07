@@ -1,0 +1,33 @@
+#pagewrap {
+    width: 980px;
+    margin: 0 auto;
+}
+ 
+#header {
+    height: 160px;
+    background-color: #FFE1FF;
+}
+
+#header #main-nav li{
+	display: inline;
+}
+
+#content {
+    width: 600px;
+ 	height: 450px;
+    float: left;
+    background-color: #c00;
+}
+ 
+#sidebar {
+    width: 280px;
+    height: 200px;
+    float: right;
+    background-color: #00ff99;
+}
+ 
+#footer {
+    clear: both;
+    height: 50px;
+    background-color: #000099;
+}
