@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>生活服务Web App</title>
+	<link href="images/logo.jpg" rel="SHORTCUT ICON" />
+	<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="index">
+		<div data-role="header" data-position="fixed">
+    		<div data-role="navbar">
+				<ul>
+				<li><a href="#index1">天气预报</a></li>
+				<li><a href="#index2">快递查询</a></li>
+				<li><a href="#index3">其他</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="main" class="ui-content">
+    		<h3>这是一个基于<a href="http://www.webxml.com.cn/zh_cn/index.aspx" target="_blank"><img src="images/webxml_logo.gif" alt="<WebXml/>"></a>免费API的天气预报查询jQuery Mobile Web App.</h3>
+    		<p>所以，可能出现服务不稳定的情况，即输入城市名称点击查询出现“高速访问被限制！”，此时可能需要反复点击几次查询按钮直至出现天气详情.</p><br><br><p>点击顶部天气预报即可开始查询，更多功能正在完善，敬请期待！ by Sagitario</p>
+  		</div>
+		<div data-role="footer" data-position="fixed">
+    		<div data-role="navbar">
+            <ul>
+                <li><a href="#index" data-icon="grid" class="ui-btn-active">首页</a></li>
+                <li><a href="#" data-icon="star">收藏</a></li>
+                <li><a href="#" data-icon="gear">设置</a></li>
+            </ul>
+        	</div>
+  		</div>
+	</div>
+	
+	<div data-role="page" id="index1">
+		<div data-role="header" data-position="fixed">
+    		<h1>天气预报</h1>
+  		</div>
+  		<div data-role="main" class="ui-content">
+    		<label>请输入要查询的城市:</label>
+    		<input type="text" name="city" id="search-city" value="">
+    		<input type="button" value="查询" id="search-submit">
+    		<div data-role="listview" data-inset="true" id="list">
+  			</div>
+
+		</div>
+		<div data-role="footer" data-position="fixed">
+    		<div data-role="navbar">
+            <ul>
+                <li><a href="#index" data-icon="grid" class="ui-btn-active">首页</a></li>
+                <li><a href="#" data-icon="star">收藏</a></li>
+                <li><a href="#" data-icon="gear">设置</a></li>
+            </ul>
+        	</div>
+  		</div>
+	</div>
+
+	<div data-role="page" id="index2">
+		<div data-role="header" data-position="fixed">
+    		<h1>快递查询</h1>
+  		</div>
+  		<div data-role="main" class="ui-content">
+    		<p>我现在是一个快递查询!!</p>
+  		</div>
+		<div data-role="footer" data-position="fixed">
+    		<div data-role="navbar">
+            <ul>
+                <li><a href="#index" data-icon="grid" class="ui-btn-active">首页</a></li>
+                <li><a href="#" data-icon="star">收藏</a></li>
+                <li><a href="#" data-icon="gear">设置</a></li>
+            </ul>
+        	</div>
+  		</div>
+	</div>
+
+<script src="javascript/javascript.js"></script>
+
+</body>
+</html>
