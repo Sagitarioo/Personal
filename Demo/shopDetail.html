@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shopDetail</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="AmazeUI-2.7.2/assets/css/amazeui.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script src="AmazeUI-2.7.2/assets/js/amazeui.min.js"></script>
+	<style type="text/css">
+	.shop-banner{
+		background-image: url(img/img11.jpg);
+		background-size: cover;
+		background-position:center;
+		width: 100%;
+		height: 180px;
+		color: #fff;
+	}
+	.shop-banner-name{
+		position: absolute;
+		margin-top: 120px;
+		margin-left: 10px;
+	}
+	.shop-banner-slogan{
+		position: absolute;
+		margin-top: 156px;
+		margin-left: 10px;
+	}
+	.text-name{
+		font-size: 24px;
+		font-weight: 500;	
+	}
+	.shop-banner-text{
+		height: 60px;
+		border-bottom: 1px solid #e3e3e3; 
+	}
+	.sbt-left1{
+		position: relative;
+		float: left;
+		width: 20%;
+		margin-top: 14px;
+		padding-left: 10px;
+	}
+	.text-price{
+		font-size: 30px;
+	}
+	.sbt-left2{
+		position: relative;
+		float: left;
+		width: 40%;
+		margin-top: 30px;
+	}
+	.sbt-left3{
+		position: relative;
+		float: left;
+		width: 40%;
+	}
+	.btn-buy{
+		position: relative;
+		float: right;
+		margin-top: 10px;
+		margin-right: 10px;
+	}
+	.am-btn{
+		border-radius: 4px;
+	}
+	.sbt1-left1{
+		position: relative;
+		float: left;
+		margin-top: 10px;
+		padding-left: 10px;
+		width: 60%;
+	}
+	.sbt1-left2{
+		position: relative;
+		float: left;
+		width: 40%;
+		margin-top: 10px;
+	}
+	/*.shop-discount{
+		width: 100%; 
+		
+	}*/
+	.discount-s{
+		border: 1px solid #000;
+		border-radius: 2px;
+		padding: 4px;
+	}
+	.discount-as{
+		position: relative;
+		float: left;
+		margin-top: 16px;
+		margin-left: 10px;
+		height: 20px;
+	}
+	.shop-evaluate-text{
+		width: 100%;
+		border-top: 4px solid #f1f1f1;
+		margin-top: 14px;
+	}
+	.shop-star-left1{
+		position: relative;
+		float: left;
+		padding-left: 4px;
+	}
+	.shop-star-left2{
+		position: relative;
+		float: right;
+	}
+	.shop-star{
+		margin-top: 4px;
+		height: 26px;
+		border-bottom: 1px solid #e3e3e3; 
+	}
+	.am-icon-star{
+		color: #F37B1D;
+	}
+	.shop-info-s{
+		width: 100%;
+		border-bottom: 1px solid #e3e3e3;
+		border-top: 4px solid #f1f1f1;
+		margin-top: 14px;
+	}
+	.shop-info-title{
+		margin-left: 10px;
+		height: 30px;
+		line-height: 30px;
+	}
+	.sic-left1{
+		position: relative;
+		float: left;
+		width: 80%;
+		padding-left: 6px;
+	}
+	.sic-left2{
+		position: relative;
+		float: right;
+		margin-right: 20px;
+		
+	}
+	.shop-info-contain{
+		border-bottom: 1px solid #e3e3e3;
+		height: 66px;
+	}
+	.sic-phone{
+		line-height: 66px;
+	}
+	.sic-address{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	.shop-use-s{
+		width: 100%;
+		border-bottom: 1px solid #e3e3e3;
+		border-top: 4px solid #f1f1f1;
+	}
+	.color-orange{
+		color: #F37B1D;
+		margin-left: 6px;
+		margin-top: 4px;
+	}
+	.sud-a{
+		margin-left: 12px;
+	}
+	#btn-back{
+		position: absolute;
+		margin-top: 4px;
+		margin-left: 4px;
+	}
+	.det-menu{
+		border-top: 4px solid #f1f1f1;
+	}
+	.gd-demo-img{
+		width: 100%;
+	}
+	</style>
+</head>
+<body>
+	<div class="shop-banner">
+		<div id="btn-back"><span class="am-icon-chevron-left am-icon-sm"><span></div>
+		<div class="shop-banner-name"><span class="text-name">restaurant</span></div>
+		<div class="shop-banner-slogan"><span class="text-slogan">this is a slogan</span></div>
+	</div>
+	<div class="shop-banner-text">
+		<div class="sbt-left1"><span>¥&nbsp;</span><span class="text-price">88</span></div>
+		<div class="sbt-left2"><span>最高门市价:</span><span>¥100</span></div>
+		<div class="sbt-left3"><div class="btn-buy"><button type="button" class="am-btn am-btn-warning" onClick="buyNow()">立即抢购</button></div></div>
+	</div>
+	<div class="shop-banner-text">
+		<div class="sbt1-left1">
+			<div class="text-service1"><span class="am-icon-check-circle-o am-icon-sm"></span><span> 随时退</span></div>
+			<div class="text-service2"><span class="am-icon-check-circle-o am-icon-sm"></span><span> 过期自动退</span></div>
+		</div>
+		<div class="sbt1-left2">
+			<div class="text-sold"><span class="am-icon-dot-circle-o am-icon-sm"></span><span> 已售 </span><span>320</span></div>
+		</div>
+	</div>
+	<div class="am-g shop-discount">
+		<div class="discount-as">
+			<span class="discount-s">88代100元券</span>
+		</div>
+		<div class="discount-as">
+			<span class="discount-s">180代200元券</span>
+		</div>
+		<div class="discount-as">
+			<span class="discount-s">128元2-4人餐</span>
+		</div>
+		<div class="discount-as">
+			<span class="discount-s">精选2-4人餐</span>
+		</div>
+	</div>	
+	<div class="shop-evaluate-text">
+		<div class="shop-star">
+			<div class="shop-star-left1">
+				<span class="am-icon-star am-icon-sm"></span>
+				<span class="am-icon-star am-icon-sm"></span>
+				<span class="am-icon-star am-icon-sm"></span>
+				<span class="am-icon-star am-icon-sm"></span>
+				<span class="am-icon-star am-icon-sm"></span>
+				<span>4.8</span><span>分</span>
+			</div>
+			<div class="shop-star-left2"><span>166</span><span>人评价&nbsp;</span><span class="am-icon-chevron-right am-icon-sm"><span></div>
+		</div>
+		<div class="am-g shop-discount">
+			<div class="discount-as">
+				<span class="discount-s"><span>味道赞</span> <span>35</span></span>
+			</div>
+			<div class="discount-as">
+				<span class="discount-s"><span>服务热情</span> <span>24</span></span>
+			</div>
+			<div class="discount-as">
+				<span class="discount-s"><span>环境好</span> <span>30</span></span>
+			</div>
+			<div class="discount-as">
+				<span class="discount-s"><span>分量足</span> <span>5</span></span>
+			</div>
+		</div>
+	</div>
+	<div class="shop-info">
+		<div class="shop-info-s">
+			<div class="shop-info-title">
+				<span>商家信息</span>
+			</div>
+		</div>
+		<div class="shop-info-contain">
+			<div class="sic-left1">
+				<div class="sic-name">restaurant</div>
+				<div class="sic-address">this is the restaurant's address.this is the restaurant's address.</div>
+				<div class="sic-distance"><span class="am-icon-map-marker am-icon-sm">&nbsp;<span>2.4 km</span></div>
+			</div>
+			<div class="sic-left2">
+				<div class="sic-phone"><span class="am-icon-phone am-icon-lg"></span></div>
+			</div>		
+		</div>
+	</div>
+	<div class="shop-use">
+		<div class="shop-use-s">
+			<div class="shop-info-title">
+				<span>购买须知</span>
+			</div>
+		</div>
+		<div class="shop-use-det">
+			<div class="color-orange"><span>适用范围</span></div>
+			<div class="sud-a">除酒水，饮料，茶位外全场通用</div>
+			<div class="color-orange"><span>有效期</span></div>
+			<div class="sud-a">2017.4.25 至 2017.11.20</div>
+			<div class="color-orange"><span>使用时间</span></div>
+			<div class="sud-a">11:00-16:30,22:00-次日3:00</div>
+			<div class="color-orange"><span>使用规则</span></div>
+			<div class="sud-a">
+				<ul>
+					<li>无需预约，消费高峰时可能需要等位</li>
+					<li>最多可叠加使用2张</li>
+					<li>不兑现，不找零</li>
+				</ul>
+			</div>
+		</div>
+	</div> 
+	<div class="det-menu">
+		<ul class="nav nav-tabs">  
+			<li><a href="#goods-detail" data-toggle="tab">图文详情</a></li>  
+			<li><a href="#evaluate-all" data-toggle="tab">所有评价</a></li>  
+			<li><a href="#special-product" data-toggle="tab">特色推荐</a></li>  
+		</ul> 
+		<div class="tab-content">  
+			<div class="tab-pane" id="goods-detail">
+				<p>This comparator compares two beans by the specified bean property It is also possible to compare beans based on nested indexed combined mapped bean properties Please see the PropertyUtilsBean documentation for all property name Note The possibilities Note The BeanComparator passes the values of the specified bean property to a ComparableComparator if no comparator is specified in the constructor If you are comparing two beans based on a property that could contain null values a suitable Comparator or ComparatorChain should be supplied in the constructor Author Eric Pugh Tim O'Brien See Also Serialized Form This comparator compares two beans by the specified bean property It is also possible to compare beans based on nested indexed combined mapped bean properties Please see the PropertyUtilsBean documentation for all property name Note The possibilities Note The BeanComparator passes the values of the specified bean property to a ComparableComparator if no comparator is specified in the constructor If you are comparing two beans based on a property that could contain null values a suitable Comparator or ComparatorChain should be supplied in the constructor Author Eric Pugh Tim O'Brien See Also Serialized Form This comparator compares two beans by the specified bean property
+				</p>
+				<img src="img/img11.jpg" class="gd-demo-img">
+			</div>  
+			<div class="tab-pane" id="evaluate-all">
+				<p>It is also possible to compare beans based on nested indexed combined mapped bean properties Please see the PropertyUtilsBean documentation for all property name Note The possibilities Note The BeanComparator passes the values of the specified bean property to a ComparableComparator if no comparator is specified in the constructor If you are comparing two beans based on a property that could contain null values a suitable Comparator or ComparatorChain should be supplied in the constructor Author Eric Pugh Tim O'Brien See Also Serialized Form This comparator compares two beans by the specified bean property
+				</p>
+			</div>  
+			<div class="tab-pane" id="special-product">333</div>  
+		</div>
+	</div>
+	<div>
+		<div class="shop-use-s">
+			<div class="shop-info-title">
+				<span>other</span>
+			</div>
+		</div>
+		waitting
+	</div>
+</body>
+<script type="text/javascript">
+$(function(){
+	/*var discount=$('.discount-as').size();
+	var height=$('.shop-discount').height();
+	alert(height);*/
+});	
+$('#btn-back').click(function(){
+	window.location.href="index.html";
+});
+/*$('#tabfun').click(function(){
+	$('#home').show();
+	$(document).scrollTop(600);
+	
+});*/
+function buyNow(){
+	window.location.href="orderConfirm.html";
+}
+</script>
+</html>

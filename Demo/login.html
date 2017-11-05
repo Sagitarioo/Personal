@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="AmazeUI-2.7.2/assets/css/amazeui.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script src="AmazeUI-2.7.2/assets/js/amazeui.min.js"></script>
+	<style type="text/css">
+	.show-title-text{
+		height: 40px;
+		line-height: 40px;
+		background-color: #108df0;
+	}
+	.stt-name{
+		font-size: 18px;
+		font-weight:500; 
+		color: #fff;
+	}
+	.snt-a1{
+		float: left;
+		width: 10%;
+		padding-left: 4px;
+	}
+	.am-icon-chevron-left{
+		color: #fff;
+	}
+	.snt-a2{
+		float: left;
+		width: 80%;
+		text-align: center;
+	}
+	.si-mtp{
+		margin-top: 20px;
+	}
+	.si-line{
+		width: 96%;
+		height: 1px;
+		margin: 4px auto;
+		background-color: #e3e3e3;
+	}
+	.si-s{
+		width: 100%;
+		height: 30px;
+		border: none;
+	}
+	.si-mlr{
+		margin-left: 6px;
+		margin-right: 6px;
+	}
+	.center-box{
+		width: 100%;
+		height: 200px;
+	}
+	.am-btn-primary{
+		background-color: #108df0;
+		width: 100%;
+		border-radius: 2px;
+	}
+	.show-btn{
+		width: 96%;
+		margin: 20px auto;
+	}
+	.show-option{
+		width: 100%;
+	}
+	.so-left{
+		float: left;
+		margin-left: 6px;
+		color: #108df0;
+	}
+	.so-right{
+		float: right;
+		margin-right: 6px;
+		color: #108df0;
+	}
+	.s-clear{
+		float: right;
+		margin-top: -26px;
+		margin-right: 10px;
+	}
+	.am-icon-close{
+		color: #dcdcdc;
+	}
+	</style>
+</head>
+<body>
+	<div class="show-title-text">
+		<div id="btn-back" class="snt-a1"><span class="am-icon-chevron-left am-icon-sm"><span></div>
+		<div class="snt-a2"><span class="stt-name">webname</span></div>
+		<div class="snt-a1"></div>
+	</div> 
+	<div class="center-box">
+		<div class="show-input si-mtp si-mlr">
+			<input type="text" name="username" id="username" class="si-s" placeholder="账户名/手机号/Email">
+			<div id="btn-clear1" class="s-clear"><span class="am-icon-close am-icon-sm"><span></div>
+		</div>
+		<div class="si-line"></div>
+		<div class="show-input si-mlr">
+			<input type="password" name="password" id="password" class="si-s" placeholder="请输入您的密码">
+			<div id="btn-clear2" class="s-clear"><span class="am-icon-close am-icon-sm"><span></div>
+		</div>
+		<div class="si-line"></div>
+		<div class="show-btn">
+			<button type="button" class="am-btn am-btn-primary" id="btn-login">登录</button>
+		</div> 
+		<div class="show-option">
+			<div class="so-left" id="toregister">
+				<span>立即注册</span>
+			</div>
+			<div class="so-right">
+				<span>找回密码</span>
+			</div>
+		</div>
+	</div>
+	<div class="am-modal am-modal-no-btn" tabindex="-1" id="modal-a">
+		<div class="am-modal-dialog">
+			<div class="am-modal-hd">
+				error
+				<a onclick="modalClose()" class="am-close am-close-spin">&times;</a>
+			</div>
+			<div class="am-modal-bd">
+				context
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+$(window).resize(function(){
+	$('.center-box').css({
+		position:"absolute",
+		left:($(window).width()-$('.center-box').outerWidth())/2,
+		top:($(window).height()-$('.center-box').outerHeight())/2,
+	});
+});
+$(function(){
+	$(window).resize();
+});
+$('#btn-clear1').click(function(){
+	$('#username').val("");
+});
+$('#btn-clear2').click(function(){
+	$('#password').val("");
+});
+$('#btn-login').click(function(){
+	window.location.href="index.html";
+	/*$('#modal-a').modal('open');*/
+});
+$('#toregister').click(function(){
+	window.location.href="register.html";
+});
+function modalClose(){
+	$('#modal-a').modal('close');
+}
+</script>
+</html>

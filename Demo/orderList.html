@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>orderList</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="AmazeUI-2.7.2/assets/css/amazeui.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<style type="text/css">
+	.show-title-text{
+		height: 40px;
+		line-height: 40px;
+		background-color: #108df0;
+	}
+	.stt-name{
+		font-size: 18px;
+		font-weight:500; 
+		color: #fff;
+	}
+	.snt-a1{
+		float: left;
+		width: 10%;
+		padding-left: 4px;
+	}
+	.am-icon-chevron-left{
+		color: #fff;
+	}
+	.snt-a2{
+		float: left;
+		width: 80%;
+		text-align: center;
+	}
+	.stt{
+		display:-webkit-box;
+		display:-moz-box;
+		display:-o-box;
+		display:-ms-box;
+		display:box;
+        -webkit-box-orient:horizontal;
+		-moz-box-orient:horizontal;
+		-o-box-orient:horizontal;
+		-ms-box-orient:horizontal;
+		box-orient:horizontal;
+		width:100%;
+		height: 30px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.stt-a1{
+		-webkit-box-flex:1;
+		-moz-box-flex:1;
+		-o-box-flex:1;
+		-ms-box-flex:1;
+		box-flex:1;
+		border-bottom: 4px solid #fff;
+		text-align: center;
+	}
+	.si-line{
+		width: 96%;
+		height: 1px;
+		margin: 4px auto;
+		background-color: #e3e3e3;
+	}
+	.am-btn-primary{
+		background-color: #108df0;
+		/*width: 40px;*/
+		border-radius: 2px;
+	}
+	.show-btn{
+		width: 96%;
+		margin: 20px auto;
+	}
+	.line1{
+		border-bottom: 4px solid #108df0;
+	}
+	.list-all{
+		width: 100%;
+		height: 16vw;
+		padding-left: 6px;
+		padding-right: 6px;
+	}
+	.show-left{
+		width: 16%;
+		float: left;
+	}
+	.img-s{
+		width: 100%;
+		height: 16vw;
+	}
+	.show-mid{
+		width: 64%;
+		height: 16vw;
+		float: left;
+		padding-left: 6px;
+	}
+	.show-right{
+		height: 16vw;
+		width: 20%;
+		float: right;
+	}
+	.sm-name{
+		height: 40%;
+	}
+	.sm-sold{
+		font-size: 12px;
+		height: 30%;
+	}
+	.sm-price{
+		font-size: 12px;
+		height: 30%;
+	}
+	.btn-eva{
+		text-align: center;
+		border: 1px solid #108df0;
+		color: #108df0;
+	}
+	.sr-t{
+		height: 50%;
+		text-align: right;
+	}
+	.sr-b{
+		height: 50%;
+	}
+	</style>
+</head>
+<body>
+	<div class="show-title-text">
+		<div id="btn-back" class="snt-a1"><span class="am-icon-chevron-left am-icon-sm"><span></div>
+		<div class="snt-a2"><span class="stt-name">我的订单</span></div>
+		<div class="snt-a1"></div>
+	</div> 
+	<div class="stt">
+		<div class="stt-a1 line1" id="btn-all-list">
+			全部
+		</div>
+		<div class="stt-a1 line2" id="btn-pay-list">
+			待付款
+		</div>
+		<div class="stt-a1 line3" id="btn-use-list">
+			待使用
+		</div>
+		<div class="stt-a1 line4" id="btn-eva-list">
+			待评价
+		</div>
+		<div class="stt-a1 line5" id="btn-ser-list">
+			退款/售后
+		</div>
+	</div>
+	<div class="show-list-a1">
+		<div class="si-line"></div>		
+		<div class="show-lists">
+			<div class="list-all">
+				<div class="show-left">
+					<img src="img/img11.jpg" class="img-s">
+				</div>
+				<div class="show-mid">
+					<div class="sm-name"><span>restaurant 88代100元券</span></div>
+					<div class="sm-sold"><span>数量: </span><span>1</span></div>
+					<div class="sm-price"><span>总价:¥ </span><span>88</span></div>
+				</div>
+				<div class="show-right">
+					<div class="sr-t"><span>待评价</span></div>
+					<div class="sr-b"><div class="btn-eva" id="toevaluate">评价</div></div>
+				</div>
+			</div>
+			<div class="si-line"></div>
+		</div>
+
+		<div class="show-lists">
+			<div class="list-all">
+				<div class="show-left">
+					<img src="img/img12.jpg" class="img-s">
+				</div>
+				<div class="show-mid">
+					<div class="sm-name"><span>restaurant 88代100元券</span></div>
+					<div class="sm-sold"><span>数量: </span><span>1</span></div>
+					<div class="sm-price"><span>总价:¥ </span><span>88</span></div>
+				</div>
+				<div class="show-right">
+					<div class="sr-t"><span>已完成</span></div>
+					<div class="sr-b"><div class="btn-eva" id="toevaluate">再来一单</div></div>
+				</div>
+			</div>
+			<div class="si-line"></div>
+		</div>
+		
+	</div>
+	<div class="show-list-a2">
+		<div class="si-line"></div>		
+		<div class="show-lists">
+			<div class="list-all">
+				<div class="show-left">
+					<img src="img/img11.jpg" class="img-s">
+				</div>
+				<div class="show-mid">
+					<div class="sm-name"><span>restaurant 88代100元券</span></div>
+					<div class="sm-sold"><span>数量: </span><span>1</span></div>
+					<div class="sm-price"><span>总价:¥ </span><span>88</span></div>
+				</div>
+				<div class="show-right">
+					<div class="sr-t"><span>待付款</span></div>
+					<div class="sr-b"><div class="btn-eva" id="toevaluate">付款</div></div>
+				</div>
+			</div>
+			<div class="si-line"></div>
+		</div>
+	</div>
+	<div class="show-list-a3">
+		<div class="si-line"></div>		
+		<div class="show-lists">
+			<div class="list-all">
+				<div class="show-left">
+					<img src="img/img11.jpg" class="img-s">
+				</div>
+				<div class="show-mid">
+					<div class="sm-name"><span>restaurant 88代100元券</span></div>
+					<div class="sm-sold"><span>数量: </span><span>1</span></div>
+					<div class="sm-price"><span>总价:¥ </span><span>88</span></div>
+				</div>
+				<div class="show-right">
+					<div class="sr-t"><span>待使用</span></div>
+					<div class="sr-b"><div class="btn-eva" id="toevaluate">使用</div></div>
+				</div>
+			</div>
+			<div class="si-line"></div>
+		</div>
+	</div>
+	
+</body>
+<script type="text/javascript">
+$(function(){
+	$('.show-list-a2').hide();
+	$('.show-list-a3').hide();
+	$('.line1').css("color","#108df0");
+});
+$('#btn-all-list').click(function(){
+	$('.show-list-a1').show();
+	$('.show-list-a2').hide();
+	$('.show-list-a3').hide();
+	$('.line1').css("border-bottom","4px solid #108df0");
+	$('.line2').css("border-bottom","4px solid #fff");
+	$('.line3').css("border-bottom","4px solid #fff");
+	$('.line1').css("color","#108df0");
+	$('.line2').css("color","#000");
+	$('.line3').css("color","#000");
+});
+$('#btn-pay-list').click(function(){
+	$('.show-list-a1').hide();
+	$('.show-list-a2').show();
+	$('.show-list-a3').hide();
+	$('.line1').css("border-bottom","4px solid #fff");
+	$('.line2').css("border-bottom","4px solid #108df0");
+	$('.line3').css("border-bottom","4px solid #fff");
+	$('.line1').css("color","#000");
+	$('.line2').css("color","#108df0");
+	$('.line3').css("color","#000");
+});
+$('#btn-use-list').click(function(){
+	$('.show-list-a1').hide();
+	$('.show-list-a2').hide();
+	$('.show-list-a3').show();
+	$('.line1').css("border-bottom","4px solid #fff");
+	$('.line2').css("border-bottom","4px solid #fff");
+	$('.line3').css("border-bottom","4px solid #108df0");
+	$('.line1').css("color","#000");
+	$('.line2').css("color","#000");
+	$('.line3').css("color","#108df0");
+});
+$('#btn-back').click(function(){
+	window.location.href="myInfo.html";
+});
+</script>
+</html>

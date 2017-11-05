@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="AmazeUI-2.7.2/assets/css/amazeui.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<style type="text/css">
+	.am-g{
+		/*margin:0 auto;*/
+		width: 100%;
+	}
+	.am-g-fixed{
+		max-width: 1000px;
+	}
+	.show01a{
+		background-color: #f0f0f0;
+		border: 10px solid #fff;
+	}
+	.show01b{			
+		height: 200px;
+		width: 100%;
+	}
+	.show01c{
+		height: 140px;
+		width: 100%;
+	}
+	.carousel-inner{
+		height: 140px;
+		width: 100%;
+	}
+	.show01d{
+		background-color: #D1EEEE;
+	}
+	.show01e{
+		background-color: #ADD8E6;
+	}
+	.show01f{
+		background-color: #B2DFEE;
+	}
+	/*.lg-block{
+		box-orient:horizontal;
+		-webkit-box-orient:horizontal;
+		display:box;
+		display:-webkit-box;
+		box-flex:1;
+		-webkit-box-flex:1;
+	}
+	.min-block{
+		box-flex:1;
+		-webkit-box-flex:1;
+		border: 1px solid #000;
+	}
+	.all-block{
+		box-orient:vertical;
+		-webkit-box-orient:vertical;
+		display:box;
+		display:-webkit-box;
+	}*/
+	.lg-block{
+		position: relative;
+
+	}
+	.min-block{
+		width: 20%;
+		height: 20vw;
+		max-height:100px;
+		border: 1px solid #000;
+		float: left;
+	}
+	.all-block{
+		
+	}
+	.nav-icon{
+		text-align: center;
+		margin-top: 20%;
+	}
+	.nav-text{
+		text-align: center;
+	}
+	.item{
+		height: 200px;
+	}
+	.p-top-num{
+		margin-top: 4px;
+	}
+	.text-advice{
+		text-align: center;
+		/*color: #DBDBDB;*/
+	}
+
+	.nav-bar{
+		position: fixed;
+		z-index: 3;
+		bottom: 40px;
+		right: 8px;
+	}
+	.nav-bar-a{
+		margin-top: 8px;
+		opacity:.7;
+	}
+	.nav-bar-a :hover{
+		opacity:1;
+		background-color: #1E90FF;
+	}
+	.am-icon-btn{
+		background-color: #fff;
+	}
+	.show-pic{
+		position: relative;
+		float: left;
+		width: 20%;
+		height: 20vw;
+		/*height: 100px;*/
+	}
+	.show-text{
+		width: 100%;
+		height: 20vw;
+	}
+	.shop-img{
+		/*width: 100px;
+		height: 100px;*/
+		width: 100%;
+		height: 20vw;
+	}
+	.show-text-top{
+		width: 100%;
+		height: 35%;
+	}
+	.top-left1{
+		float: left;
+		padding-left: 8px;
+	}
+	.top-left2{
+		float: right;
+	}
+	.show-text-middle{
+		width: 100%;
+		height: 35%;
+		/*margin-top: 2%;*/
+	}
+	.middle-left1{
+		padding-left: 8px;
+		float: left;
+	}
+	.show-text-bottom{
+		height: 30%;
+		padding-left: 8px;
+		float: left;
+		/*margin-top: 2%;*/
+	}
+	.shop-name{
+		font-size: 18px;
+		font-weight:500; 
+	}
+	.shop-list{
+		border-top: 1px solid #e3e3e3;
+		border-bottom: 1px solid #e3e3e3;
+	}
+	</style>
+</head>
+<body>
+	<div id="myCarousel" class="carousel slide show01c">
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1" ></li>
+			<li data-target="#myCarousel" data-slide-to="2" ></li>
+		</ol>
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="img/img01.jpg" alt="first" class="banner-img">
+			</div>
+			<div class="item">
+				<img src="img/img02.jpg" alt="second" class="banner-img">
+			</div>
+			<div class="item">
+				<img src="img/img03.jpg" alt="third" class="banner-img">
+			</div>
+		</div>
+		<a href="#myCarousel" class="carousel-control left" data-slide="prev">&lsaquo;</a>
+		<a href="#myCarousel" class="carousel-control right" data-slide="next">&rsaquo;</a> 
+	</div>
+	<div class="am-g p-top-num">
+		<div class="all-block">
+			<div class="lg-block">
+				<div class="min-block">
+					<div class="nav-icon">
+						<span class="am-icon-search am-icon-lg"></span>
+					</div>
+					<div class="nav-text">
+						<span>search</span>
+					</div>
+				</div>
+				<div class="min-block">
+					<div class="nav-icon">
+						<span class="am-icon-th-large am-icon-lg"></span>
+					</div>
+					<div class="nav-text">
+						<span>th-large</span>
+					</div>
+				</div>
+				<div class="min-block">
+					<div class="nav-icon">
+						<span class="am-icon-bus am-icon-lg"></span>
+					</div>
+					<div class="nav-text">
+						<span>bus</span>
+					</div>
+				</div>
+				<div class="min-block">
+					<div class="nav-icon">
+						<span class="am-icon-cog am-icon-lg"></span>
+					</div>
+					<div class="nav-text">
+						<span>cog</span>
+					</div>
+				</div>
+				<div class="min-block">
+					<div class="nav-icon">
+						<span class="am-icon-user am-icon-lg"></span>
+					</div>
+					<div class="nav-text">
+						<span>user</span>
+					</div>
+				</div>
+			</div>
+			<div class="lg-block">
+				<div class="min-block">
+					<div class="nav-icon">
+						<span class="am-icon-send-o am-icon-lg"></span>
+					</div>
+					<div class="nav-text">
+						<span>send-o</span>
+					</div>
+				</div>
+				<div class="min-block">
+					<div class="nav-icon">
+						<span class="am-icon-file-o am-icon-lg"></span>
+					</div>
+					<div class="nav-text">
+						<span>file-o</span>
+					</div>
+				</div>
+				<div class="min-block">
+					<div class="nav-icon">
+						<span class="am-icon-envelope-o am-icon-lg"></span>
+					</div>
+					<div class="nav-text">
+						<span>envelope</span>
+					</div>
+				</div>
+				<div class="min-block">
+					<div class="nav-icon">
+						<span class="am-icon-cube am-icon-lg"></span>
+					</div>
+					<div class="nav-text">
+						<span>cube</span>
+					</div>
+				</div>
+				<div class="min-block">
+					<div class="nav-icon">
+						<span class="am-icon-lemon-o am-icon-lg"></span>
+					</div>
+					<div class="nav-text">
+						<span>lemon-o</span>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<div class="p-top-num">
+		<div class="text-advice"><span>▬ &nbsp;&nbsp;为您推荐&nbsp;&nbsp; ▬</span></div>
+	</div>
+	<div class="p-top-num" id="show-list">
+		<!-- <div class="shop-list">
+			<div class="show-pic">
+				<img src="img/img11.jpg" class="shop-img">
+			</div>
+			<div class="show-text">
+				<div class="show-text-top">
+					<div class="top-left1">
+						<span class="shop-name">restaurant</span>
+					</div>
+					<div class="top-left2">
+						<span>500 m</span>
+					</div>
+				</div>
+				<div class="show-text-middle">
+					<div class="middle-left1">
+						<span>this is a slogan</span>
+					</div>
+				</div>
+				<div class="show-text-bottom">
+					<span>address</span>
+				</div>
+			</div>
+		</div> -->
+	</div>
+	<div class="show01b show01e p-top-num">7</div>
+	<div class="show01b show01f p-top-num">8</div>
+	<div class="am-g">
+		<div class="am-u-sm-12 am-u-md-6 am-u-lg-3 show01a">1</div>
+		<div class="am-u-sm-12 am-u-md-6 am-u-lg-3 show01a">2</div>
+		<div class="am-u-sm-12 am-u-md-6 am-u-lg-3 show01a">3</div>
+		<div class="am-u-sm-12 am-u-md-6 am-u-lg-3 show01a">4</div>
+	</div>
+	<div>
+		<span class="am-icon-qq am-icon-lg"> qq </span>
+		<span class="am-icon-wechat am-icon-lg"> wechat </span>
+		<span class="am-icon-weibo am-icon-lg"> weibo </span>
+	</div>
+
+	<div class="nav-bar">
+		<div class="nav-bar-a" id="homebar">
+			<span class="am-icon-btn am-icon-home"></span>
+		</div>
+		<div class="nav-bar-a" id="cartbar">
+			<span class="am-icon-btn am-icon-shopping-cart"></span>
+		</div>
+		<div class="nav-bar-a" id="userbar" >
+			<span class="am-icon-btn am-icon-user"></span>
+		</div>
+	</div>
+
+</body>
+<script type="text/javascript">
+	$('.carousel').carousel({interval:2000});
+	$('#homebar').click(function(){
+		window.location.href="testDemo.html";
+	});
+	$('#userbar').click(function(){
+		window.location.href="myInfo.html";
+	});
+	$(function(){
+		for(var i=0;i<5;i++){
+			var str="<div class=\"shop-list\" id=\"sl-a"+i+"\" onClick=\"shopDet("+i+")\">"+
+					"<div class=\"show-pic\">"+
+						"<img src=\"img/img1"+i+".jpg\" class=\"shop-img\">"+
+					"</div>"+
+					"<div class=\"show-text\">"+
+						"<div class=\"show-text-top\">"+
+							"<div class=\"top-left1\">"+
+								"<span class=\"shop-name\">restaurant</span>"+
+							"</div>"+
+							"<div class=\"top-left2\">"+
+								"<span>500 m</span>"+
+							"</div>"+
+						"</div>"+
+						"<div class=\"show-text-middle\">"+
+							"<div class=\"middle-left1\">"+
+								"<span>this is a slogan</span>"+
+							"</div>"+
+						"</div>"+
+						"<div class=\"show-text-bottom\">"+
+							"<span>address</span>"+
+						"</div>"+
+					"</div>"+
+				"</div>"
+			$('#show-list').append(str);
+		}
+	});
+	function shopDet(i){
+		//window.location.href="shopDetail"+i+".html";
+		window.location.href="shopDetail.html";
+	}
+</script>
+</html>

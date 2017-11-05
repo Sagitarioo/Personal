@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>orderList</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="AmazeUI-2.7.2/assets/css/amazeui.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<style type="text/css">
+	.show-pic{
+		position: relative;
+		float: left;
+		width: 20%;
+		height: 20vw;
+		/*height: 100px;*/
+	}
+	.show-text{
+		width: 100%;
+		height: 20vw;
+	}
+	.shop-img{
+		width: 100%;
+		height: 20vw;
+	}
+	.show-text-top{
+		width: 100%;
+		height: 36%;
+	}
+	.top-left1{
+		font-weight:500;
+	}
+	.top-left2{
+		float: right;
+	}
+	.show-text-middle{
+		width: 100%;
+		height: 34%;
+	}
+	.middle-left1{
+		font-size: 10px;
+	}
+	.show-text-bottom{
+		height: 30%;
+		font-size: 10px;
+	}
+	.text-float-left{
+		padding-left: 6px;
+		float: left;
+	}
+	.shop-name-text{
+		height: 40px;
+		line-height: 40px;
+	}
+	#shop-name{
+		font-size: 18px;
+		font-weight:500; 
+	}
+	.snt-a1{
+		float: left;
+		width: 10%;
+		padding-left: 4px;
+	}
+	.snt-a2{
+		float: left;
+		width: 80%;
+		text-align: center;
+	}
+	.shop-list{
+		border-top: 1px solid #e3e3e3;
+		border-bottom: 1px solid #e3e3e3;
+	}
+	#goods-price{
+		padding-right: 10px;
+	}
+	.goods-item{
+		height: 40px;
+		width: 100%;
+		line-height: 40px;
+		border-bottom: 1px solid #e3e3e3;
+	}
+	.gi-left{
+		float: left;
+		padding-left: 4px;
+	}
+	.gi-right{
+		float: right;
+		padding-right: 4px;
+	}
+	.gi-shadow{
+		background-color: #f1f1f1;
+		height: 4px;
+	}
+	.gi-button{
+		text-align: center;
+		margin-top: 10px;
+	}
+	.am-btn-warning{
+		width: 90%;
+		border-radius: 2px;
+	}
+	</style>
+</head>
+<body>
+	<div class="shop-name-text">
+		<div id="btn-back" class="snt-a1"><span class="am-icon-chevron-left am-icon-sm"><span></div>
+		<div class="snt-a2"><span id="shop-name">restaurant</span></div>
+		<div class="snt-a1"></div>
+	</div>
+	<div class="ticket-detail">
+		<div class="shop-list">
+			<div class="show-pic">
+				<img src="img/img11.jpg" class="shop-img">
+			</div>
+			<div class="show-text">
+				<div class="show-text-top">
+					<div class="top-left1 text-float-left">
+						<span class="goods-name">88代100元券</span>
+					</div>
+					<div class="top-left2">
+						<span>¥ </span><span id="goods-price">88</span>
+					</div>
+				</div>
+				<div class="show-text-middle">
+					<div class="middle-left1 text-float-left">
+						<span>周一至周日</span>&nbsp;|&nbsp;<span>部分可用</span>&nbsp;|&nbsp;<span>免预约</span>&nbsp;|&nbsp;<span>可叠加2张</span>
+					</div>
+				</div>
+				<div class="show-text-bottom text-float-left">
+					<span class="am-icon-check-circle-o am-icon-sm"></span><span> 随时退</span>
+					<span class="am-icon-check-circle-o am-icon-sm"></span><span> 过期自动退</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="goods-item">
+		<div class="gi-left">
+			数量
+		</div>
+		<div class="gi-right">
+			1
+		</div>
+	</div>
+	<div class="goods-item">
+		<div class="gi-left">
+			小计
+		</div>
+		<div class="gi-right">
+			<span>¥ </span><span id="goods-price-s1">88</span>
+		</div>
+	</div>
+	<div class="gi-shadow"></div>
+	<div class="goods-item">
+		<div class="gi-left">
+			抵用券
+		</div>
+		<div class="gi-right">
+			<span>暂无可用</span>
+		</div>
+	</div>
+	<div class="goods-item">
+		<div class="gi-left">
+			实付金额
+		</div>
+		<div class="gi-right">
+			<span>¥ </span><span id="goods-price-s2">88</span>
+		</div>
+	</div>
+	<div class="gi-shadow"></div>
+	<div class="goods-item">
+		<div class="gi-left">
+			手机号
+		</div>
+		<div class="gi-right">
+			<span>12345678999</span>
+		</div>
+	</div>
+	<div class="gi-button">
+		<button type="button" class="am-btn am-btn-warning" id="btn-sub">¥ <span id="goods-price-s3">88</span> 提交订单</button>
+	</div>
+</body>
+<script type="text/javascript">
+$('#btn-back').click(function(){
+	window.location.href="shopDetail.html";
+});	
+$('#btn-sub').click(function(){
+	window.location.href="orderList.html";
+});
+</script>
+</html>
