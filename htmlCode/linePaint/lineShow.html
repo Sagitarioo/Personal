@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lineShowOnPhone</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<style type="text/css">
+	#vas{
+		width: 100%;
+		border: 1px solid #f0f0f0;
+		margin: auto;
+	}
+</style>
+<canvas id="vas">
+	
+</canvas>
+<script type="text/javascript">
+	var canvas=$("#vas");
+	canvas[0].width=1000;
+	canvas[0].height=1000;
+	var context=canvas[0].getContext('2d');
+	context.lineWidth=4;
+	context.strokeStyle='#f00';
+	context.moveTo(500,500);
+
+	var intervals,intervalss;
+	var i=1;
+	var x=500,y=500;
+	var len=50;//边距
+	var m=500,n=500,p=500,q=500;
+	var times=21//circle times
+	var intervalTime=1;//time
+	var speed=10;//speed
+
+	var d=new Date();
+	var stime=d.getTime();
+	intervals=setInterval(draw,100);
+	function draw(){
+		x=p-Math.pow(-1,i)*len*i;
+		if((Math.pow(-1,i)<0)&&(m<x) || (Math.pow(-1,i)>0)&&(m>x)){
+			m=m-speed*Math.pow(-1,i);
+			context.lineTo(m,y);
+			context.stroke();
+		}else{
+			clearInterval(intervals);
+			if(i<times){
+				intervalss=setInterval(draws,intervalTime);
+				p=p-Math.pow(-1,i)*len*i;
+			}
+			var de=new Date();
+			var etime=de.getTime();
+			var runtime=etime-stime;
+			console.log("run time="+runtime);
+		}
+	}
+	function draws(){
+		y=q-Math.pow(-1,i)*len*i;
+		if((Math.pow(-1,i)<0)&&(n<y) || (Math.pow(-1,i)>0)&&(n>y)){
+			n=n-speed*Math.pow(-1,i);
+			context.lineTo(x,n);
+			context.stroke();
+		}else{
+			clearInterval(intervalss);
+			intervals=setInterval(draw,intervalTime);
+			q=q-Math.pow(-1,i)*len*i;
+			i++;
+		}
+	}
+</script>
+</body>
+</html>
