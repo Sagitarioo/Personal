@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="AmazeUI-2.7.2/assets/css/amazeui.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script src="AmazeUI-2.7.2/assets/js/amazeui.min.js"></script>
+	<style type="text/css">
+	.tdsty{
+		border-top: 1px solid #000;
+		border-left: 1px solid #000;
+	}
+	#tbShow{
+		border-bottom: 1px solid #000;
+		border-right: 1px solid #000;
+	}
+	.btnSt{
+		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.am-btn-secondary{
+		width: 80%;
+	}
+	</style>
+</head>
+<body>
+<div>
+	<div class="am-input-group am-datepicker-date" data-am-datepicker="{format: 'yyyy-mm-dd', viewMode: 'years'}">
+		<input type="text" class="am-form-field" id="dateSel" placeholder="日历组件" readonly>
+		<span class="am-input-group-btn am-datepicker-add-on">
+			<button class="am-btn am-btn-default" type="button"><span class="am-icon-calendar"></span> </button>
+		</span>
+	</div>
+	<div class="btnSt">
+		<button type="button" class="am-btn am-btn-secondary" onclick="color()">color</button>
+	</div>
+	<div id="showText">
+		1000格,1格1个月,83年，你现在： <span id="showAge"></span> 岁<br>
+		红色已过去，绿色为剩余...
+	</div>
+</div>
+<div>
+	<table class="table table-bordered" id="tbShow">	
+		
+	</table>
+</div>
+
+</body>
+<script type="text/javascript">
+$(window).resize(function(){
+	$('tr').css({
+		height:($(window).width())/25,
+	});
+});
+$(function(){
+	$(window).resize();
+	$('#showText').hide();
+	$('#showAge').html("");
+});
+$('#dateSel').click(function(){
+	$('#dateSel').datepicker('open');
+});
+var m=25,n=40;
+function redy(){	
+	for (var i = 0; i <n; i++) {
+		$('#tbShow').append("<tr id='tr"+i+"' class='tr"+i+"'></tr>");
+		for(var j=0;j<m;j++){
+			var num=i*m+j
+			$('#tr'+i).append("<td id='tb"+i+j+"' class='ta"+num+" tdsty'></td>");
+		}
+	}
+}
+redy();
+function coTime(){
+	var selDate=$('#dateSel').val();
+	var inputY=selDate.substring(0,4);
+	var inputM=selDate.substring(5,7);
+	var inputD=selDate.substring(8,10);
+	var minutes = 1000*60;
+	var hours = minutes*60;
+	var days = hours*24;
+	var years = days*365;
+	var d = new Date();
+	var t = d.getTime();
+	var ts = Date.UTC(inputY,inputM,inputD);
+	var outMs=t-ts;
+	var y = outMs/years;
+	var outMo=y*12;
+	$('#showText').show();
+	$('#showAge').html("");
+	$('#showAge').append(Math.ceil(y));
+	var outRound=Math.round(outMo);
+	return outRound;
+}
+function color(){
+	var k=coTime();
+	for(var i=0;i<m*n;i++){		
+		if(i<k){
+			$('.ta'+i).css("background-color","#F00");
+		}else{
+			$('.ta'+i).css("background-color","#0F0");
+		}
+	}
+}
+</script>
+</html>
