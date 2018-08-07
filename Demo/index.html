@@ -202,7 +202,7 @@
 						<span>cog</span>
 					</div>
 				</div>
-				<div class="min-block">
+				<div class="min-block" id="mb-user">
 					<div class="nav-icon">
 						<span class="am-icon-user am-icon-lg"></span>
 					</div>
@@ -291,11 +291,11 @@
 	</div>
 
 	<div class="nav-bar">
+		<div class="nav-bar-a" id="upbar">
+			<span class="am-icon-btn am-icon-arrow-up"></span>
+		</div>
 		<div class="nav-bar-a" id="homebar">
 			<span class="am-icon-btn am-icon-home"></span>
-		</div>
-		<div class="nav-bar-a" id="cartbar">
-			<span class="am-icon-btn am-icon-shopping-cart"></span>
 		</div>
 		<div class="nav-bar-a" id="userbar">
 			<span class="am-icon-btn am-icon-user"></span>
@@ -304,10 +304,16 @@
 </body>
 <script type="text/javascript">
 	$('.carousel').carousel({interval:2000});
+	$('#upbar').click(function(){
+		$('body,html').animate({scrollTop:0},500);
+	});
 	$('#homebar').click(function(){
 		window.location.href="index.html"
 	});
 	$('#userbar').click(function(){
+		window.location.href="myInfo.html"
+	});
+	$('#mb-user').click(function(){
 		window.location.href="myInfo.html"
 	});
 	$(function(){
