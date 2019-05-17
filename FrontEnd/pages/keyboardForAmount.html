@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>keyboard</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script src="../script/jquery-3.2.1.min.js"></script>
+	<style type="text/css">
+	@media only screen and (min-width: 320px){
+		html {
+    		font-size: 62.5% !important;
+		}
+	}
+	/*html {
+	    font-size: 10px;
+	    -webkit-tap-highlight-color: rgba(0,0,0,0);
+	}*/
+	body {
+	    margin: 0;
+	}
+	#keyboard{
+		background-color: #f1f1f1;
+		position: absolute;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	.mid-show-one{
+		position: relative;
+	}
+	.mid-show{
+		position: relative;
+		box-orient:horizontal;
+		-webkit-box-orient:horizontal;
+		display:box;
+		display:-webkit-box;
+		box-flex:1;
+		-webkit-box-flex:1;
+		width: 100%;
+		background-color: #fff;
+	}
+	.mid-show-lt{
+		box-flex:1;
+		-webkit-box-flex:1;
+		width: 20px;
+	}
+	.nav-text-r{
+		text-align: center;
+	    border-bottom: 1px solid #f1f1f1;
+	    border-top: 1px solid #f1f1f1;
+	    font-size: 3rem;
+	}
+	.nav-text-rc{
+	    font-size: 2rem;
+	}
+	.show-border{
+		border-top: 1px solid #f1f1f1;
+		border-left: 1px solid #f1f1f1;
+		border-right: 1px solid #f1f1f1;
+	}	
+	.btn-default-style {
+	    background-image: linear-gradient(to bottom,#fff 0,#fff 100%);
+	}
+	.btn-default-style:active {
+		background-image: none;
+	    color: #333;
+	    background-color: #e6e6e6;
+	}
+	.inputArea {
+		width: 90%;
+		height: 40px;
+		margin-left: 5%;
+		background-color: #fff;
+	    background-image: none;
+	    border: 1px solid #ccc;
+	    border-radius: 0;
+	    vertical-align: middle;
+	    font-size: 30px;
+	}
+	@keyframes blink {
+		0%,100% {
+			background-color: #000;
+		}
+		50% {
+			background-color: transparent;
+		}
+	}
+	.new-inputArea:after {
+		position: absolute;
+		content: '';
+		display: inline-block;
+		width: 2px;
+		height: 30px;
+		margin-top: 20px;
+		transform: translateY(-50%);
+		animation: blink 1.2s infinite steps(1,start);
+	}
+	.inputAreaBox {
+		position: relative;
+		height: 42px;
+	}
+	.inputArea-number {
+		margin-top: -41px;
+		margin-left: 5%;
+		font-size: 30px;
+	}
+	.btn-go {
+		color: #fff;
+	    background-color: #3bb4f2;
+	    border-color: #3bb4f2;
+	    border-radius: 2px;
+	    padding: .625em 1em;
+	    vertical-align: middle;
+	    font-size: 1.6rem;
+	    font-weight: 400;
+	    line-height: 1.2;
+	    text-align: center;
+	    white-space: nowrap;
+	    background-image: none;
+	    border: 1px solid transparent;
+	    cursor: pointer;
+	    outline: 0;
+	}
+	.ams-btn[disabled], fieldset[disabled] .ams-btn {
+	    pointer-events: none;
+	    border-color: transparent;
+	    cursor: not-allowed;
+	    opacity: .45;
+	    -webkit-box-shadow: none;
+	    box-shadow: none;
+	}
+	.btnArea {
+		text-align: center;
+		margin-top: 40px;
+	}
+	.viewHeader {
+		margin-top: 20%;
+	}
+	.viewMid {
+		margin-top: 20px;
+	}
+	.viewHeader-t1{
+		position: relative;
+		width: 6.2rem;
+		height: 6.2rem;
+		background-color: #fff;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.user-pic{
+		width: 6rem;
+		height: 6rem;
+		border-radius: 3rem;
+		border: 1px solid #ccc;
+	}
+	.viewHeader-t2{
+		display: table;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 1rem;
+	}
+	.ac-text-t1 {
+		margin-left: 5%;
+		margin-bottom: 1rem;
+	}
+	.ac-text-t2 {
+		text-align: center;
+	}
+	</style>
+</head>
+<body>
+	<div>
+		<div class="viewHeader">
+			<div class="viewHeader-t1">
+				<img src="../img/my.jpg" alt="user" class="user-pic">			
+			</div>
+			<div class="viewHeader-t2">
+				<div class="ac-text-t2"><span>孙*空</span></div>
+				<div class="ac-text-t2"><span>6217****0123</span></div>
+			</div>
+		</div>
+		<div class="viewMid">
+			<div class="ac-text-t1">
+				<span>转账金额</span>
+			</div>			
+		</div>
+		<div class="inputAreaBox">
+			<div class="inputArea" id="inputArea">
+				
+			</div>
+		</div>
+		<div class="btnArea">
+			<button type="button" class="ams-btn btn-go">确认转账</button>
+		</div>
+	</div>
+
+	<div id="keyboard">
+	<div class="mid-show-one">
+		<div class="mid-show">
+			<div class="mid-show-lt show-border">
+				<div class="nav-text nav-text-r keyboard-num btn-default-style">
+					<span>1</span>
+				</div>
+				<div class="nav-text nav-text-r keyboard-num btn-default-style">
+					<span>4</span>
+				</div>
+			</div>
+			<div class="mid-show-lt show-border">
+				<div class="nav-text nav-text-r keyboard-num btn-default-style">
+					<span>2</span>
+				</div>
+				<div class="nav-text nav-text-r keyboard-num btn-default-style">
+					<span>5</span>
+				</div>
+			</div>
+			<div class="mid-show-lt show-border">
+				<div class="nav-text nav-text-r keyboard-num btn-default-style">
+					<span>3</span>
+				</div>
+				<div class="nav-text nav-text-r keyboard-num btn-default-style">
+					<span>6</span>
+				</div>
+			</div>
+			<div class="mid-show-lt show-border">
+				<div class="nav-text-r nav-text-rb keyboard-delete btn-default-style">
+					<span>x</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mid-show-one">
+		<div class="mid-show">
+			<div class="mid-show-lt show-border">
+				<div class="nav-text nav-text-r keyboard-num btn-default-style keyboard-num">
+					<span>7</span>
+				</div>
+				<div class="nav-text nav-text-r keyboard-num btn-default-style">
+					<span>.</span>
+				</div>
+			</div>
+			<div class="mid-show-lt show-border">
+				<div class="nav-text nav-text-r keyboard-num btn-default-style">
+					<span>8</span>
+				</div>
+				<div class="nav-text nav-text-r keyboard-num btn-default-style">
+					<span>0</span>
+				</div>
+			</div>
+			<div class="mid-show-lt show-border">
+				<div class="nav-text nav-text-r keyboard-num btn-default-style">
+					<span>9</span>
+				</div>
+				<div class="nav-text nav-text-r keyboard-icon btn-default-style">
+					<span>...</span>
+				</div>
+			</div>
+			<div class="mid-show-lt show-border">
+				<div class="nav-text-r nav-text-rb nav-text-rc btn-default-style keyboard-sure">
+					<span>确定</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+</body>
+<script type="text/javascript">
+$(function(){
+	keyboardPosition();
+	$('#keyboard').hide();
+	$('.btn-go').attr('disabled','disabled');
+});
+function keyboardPosition(){
+	var heights=$(window).height();
+	$('#keyboard').css({
+		top:(heights-heights/3-2)
+	});
+	$('.mid-show-lt').css({
+		height:(heights/6)
+	});
+	$('.nav-text').css({
+		height:(heights/12)
+	});
+	$('.nav-text-rb').css({
+		height:(heights/6)
+	});
+	$(".nav-text").css("line-height",heights/12+"px");
+	$(".nav-text-rb").css("line-height",heights/6+"px");
+}
+$(window).resize(function(){
+	keyboardPosition();
+});
+$("input[name='inputArea']").focus(function(){
+	$('#keyboard').show();
+});
+$('.keyboard-sure').click(function(){
+	$('#keyboard').hide();
+	$('.inputArea').removeClass('new-inputArea');
+});
+$("#inputArea").click(function(){
+	$('#keyboard').show();
+	$('.inputArea').addClass('new-inputArea');
+});
+var textStr = "";
+$('.keyboard-num').click(function(){
+	var selectNum = $(this).children().text();
+	// console.log("selectNum="+selectNum+",textStr="+textStr);
+	if(textStr==''&&selectNum=='.'){
+		return null;
+	}
+	if(textStr.indexOf('.')>-1){
+		if(selectNum=='.'){
+			return null;
+		}
+		if(textStr=='0.0'&&selectNum==0){
+			return null;
+		}
+		textStr+=selectNum;
+		if(isMoney(textStr)==false){
+			textStr=textStr.substring(0,textStr.length-1);
+			return null;
+		}
+		$("#inputArea").append(selectNum);
+	}else{
+		if(textStr=='0'&&selectNum!='.'){
+			return null;
+		}
+		textStr+=selectNum;
+		$("#inputArea").append(selectNum);
+	}
+
+	if(isMoney(textStr)==true){
+		if(textStr=='0'||textStr=='0.'||textStr=='0.0'){
+			$('.btn-go').attr('disabled','disabled');
+		}else{
+			$('.btn-go').removeAttr('disabled');
+		}
+	}else{
+		$('.btn-go').removeAttr('disabled');
+	}
+});
+$('.keyboard-delete').click(function(){
+	var strLength=textStr.length;
+	if(strLength>0){
+		textStr=textStr.substring(0,strLength-1);
+		$("#inputArea").html(textStr);
+	}
+	if(textStr==''||textStr=='0'||textStr=='0.'||textStr=='0.0'){
+		$('.btn-go').attr('disabled','disabled');
+	}
+});
+function isMoney(str) { 
+	var reg=/^\d+(\.\d{0,2})?$/;
+	if(str != '' && str.match(reg) == null) {
+		return false;
+	}else if(str=='') {
+		return false;
+	}else {
+		return true;
+	} 
+}
+var amount="";
+$('.btn-go').click(function(){
+	var strLength=textStr.length;
+	if(strLength>0){
+		if(textStr.indexOf('.')>-1){
+			if(textStr.split(".")[1].length==0){
+				amount=textStr+'00';
+				alert(amount);
+			}else if(textStr.split(".")[1].length==1){
+				amount=textStr+'0';
+				alert(amount);
+			}else{
+				amount=textStr;
+				alert(amount);
+			}
+		}else{
+			amount=textStr+'.00';
+			alert(amount);
+		}
+	}
+});
+</script>
+</html>
