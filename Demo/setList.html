@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>设置</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="AmazeUI-2.7.2/assets/css/amazeui.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script src="AmazeUI-2.7.2/assets/js/amazeui.min.js"></script>
+	<style type="text/css">
+	body{
+		background-color: #f1f1f1;
+	}
+	.show-title-text{
+		height: 40px;
+		line-height: 40px;
+		background-color: #108df0;
+	}
+	.stt-name{
+		font-size: 18px;
+		font-weight:500; 
+		color: #fff;
+	}
+	.snt-a1{
+		float: left;
+		width: 10%;
+		padding-left: 4px;
+	}
+	.am-icon-chevron-left{
+		color: #fff;
+	}
+	.snt-a2{
+		float: left;
+		width: 80%;
+		text-align: center;
+	}
+	.show-menu{
+		width: 100%;
+	}
+	.cube{
+		width: 100%;
+		height: 40px;
+		line-height: 40px;
+		margin-top: 4px;
+		background-color: #fff;
+	}
+	.cu-left{
+		float: left;
+		padding-left: 20px;
+	}
+	.cu-right{
+		float: right;
+		padding-right: 20px;
+	}
+	.am-btn{
+		width: 100%;
+		border-radius: 2px;
+	}
+	.show-btn{
+		width: 96%;
+		margin: 20px auto;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="show-title-text">
+		<div id="btn-back" class="snt-a1"><span class="am-icon-chevron-left am-icon-sm"><span></div>
+		<div class="snt-a2"><span class="stt-name">设置</span></div>
+		<div class="snt-a1"></div>
+	</div> 
+	<div class="show-menu">
+		<div class="cube" id="btn-info">
+			<div class="cu-left"><span>个人信息</span></div>
+			<div class="cu-right"><i class="am-icon-angle-right am-icon-sm"></i></div>
+		</div>
+		<div class="cube">
+			<div class="cu-left"><span>修改手机号</span></div>
+			<div class="cu-right"><i class="am-icon-angle-right am-icon-sm"></i></div>
+		</div>
+		<div class="cube" id="btn-pwd">
+			<div class="cu-left"><span>修改密码</span></div>
+			<div class="cu-right"><i class="am-icon-angle-right am-icon-sm"></i></div>
+		</div>
+		<div class="cube">
+			<div class="cu-left"><span>实名认证</span></div>
+			<div class="cu-right"><i class="am-icon-angle-right am-icon-sm"></i></div>
+		</div>
+		
+	</div>
+	<div class="show-btn">
+		<button type="button" class="am-btn am-btn-primary" id="btn-out">退出登录</button>
+	</div>
+	<div class="am-modal am-modal-no-btn" tabindex="-1" id="modal-a">
+		<div class="am-modal-dialog">
+			<div class="am-modal-hd">
+				error
+				<a onclick="modalClose()" class="am-close am-close-spin">&times;</a>
+			</div>
+			<div class="am-modal-bd">
+				context
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+$('#btn-back').click(function(){
+	window.location.href="myInfo.html";
+});
+$('#btn-out').click(function(){
+	
+});
+$('#btn-info').click(function(){
+	window.location.href="updateUserInfo.html";
+});
+$('#btn-pwd').click(function(){
+	
+});
+</script>
+</html>

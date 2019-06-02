@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>订单详情</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="AmazeUI-2.7.2/assets/css/amazeui.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script src="AmazeUI-2.7.2/assets/js/amazeui.min.js"></script>
+	<style type="text/css">
+	body{
+		background-color: #f1f1f1;
+	}
+	.show-title-text{
+		height: 40px;
+		line-height: 40px;
+		background-color: #108df0;
+	}
+	.stt-name{
+		font-size: 18px;
+		font-weight:500; 
+		color: #fff;
+	}
+	.snt-a1{
+		float: left;
+		width: 10%;
+		padding-left: 4px;
+	}
+	.am-icon-chevron-left{
+		color: #fff;
+	}
+	.snt-a2{
+		float: left;
+		width: 80%;
+		text-align: center;
+	}
+	.show-menu{
+		width: 100%;
+	}
+	.cube{
+		width: 100%;
+		height: 40px;
+		line-height: 40px;
+		margin-top: 4px;
+		background-color: #fff;
+	}
+	.cu-left{
+		float: left;
+		width: 20%;
+		margin-left: 8%; 
+		height: 30px;
+	}
+	.cu-right{
+		float: left;
+		width: 72%;
+		height: 30px;
+	}
+	.show-cod{
+		background-color: #fff;
+		height: 100px;
+		width: 100%;
+		margin-top: 4px;
+	}
+	.cod-a{
+		padding-top: 10px;
+		text-align: center;
+	}
+	.cod-b{
+		padding-top: 14px;
+		text-align: center;
+		font-size: 24px;
+		letter-spacing: 10px
+	}
+	.am-btn{
+		width: 100%;
+		border-radius: 2px;
+	}
+	.show-btn{
+		width: 96%;
+		margin: 20px auto;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="show-title-text">
+		<div id="btn-back" class="snt-a1"><span class="am-icon-chevron-left am-icon-sm"><span></div>
+		<div class="snt-a2"><span class="stt-name">订单详情</span></div>
+		<div class="snt-a1"></div>
+	</div> 
+	<div class="show-menu">
+		<div class="show-cod">
+			<div class="cod-a">验证码</div>
+			<div class="cod-b">22228888</div>
+		</div>
+		<div class="cube">
+			<div class="cu-left"><span>订单号</span></div>
+			<div class="cu-right">20171234567890</div>
+		</div>
+		<div class="cube">
+			<div class="cu-left"><span>店铺</span></div>
+			<div class="cu-right">新商店</div>
+		</div>
+		<div class="cube">
+			<div class="cu-left"><span>产品</span></div>
+			<div class="cu-right">88低100元券</div>
+		</div>
+		<div class="cube">
+			<div class="cu-left"><span>价格</span></div>
+			<div class="cu-right">88</div>
+		</div>
+		<div class="cube">
+			<div class="cu-left"><span>优惠券</span></div>
+			<div class="cu-right">0</div>
+		</div>
+		<div class="cube">
+			<div class="cu-left"><span>支付</span></div>
+			<div class="cu-right">88</div>
+		</div>
+		<div class="cube">
+			<div class="cu-left"><span>购买时间</span></div>
+			<div class="cu-right">20171130 17:35:21</div>
+		</div>
+		<div class="cube">
+			<div class="cu-left"><span>使用时间</span></div>
+			<div class="cu-right">20171130 17:35:21</div>
+		</div>
+		
+	</div>
+	<div class="show-btn">
+		<button type="button" class="am-btn am-btn-primary" id="btn-pay">支付</button>
+	</div>
+	<div class="show-btn">
+		<button type="button" class="am-btn am-btn-primary" id="btn-eva">评价</button>
+	</div>
+	<div class="show-btn">
+		<button type="button" class="am-btn am-btn-primary" id="btn-cancel">取消订单</button>
+	</div>
+	<div class="am-modal am-modal-no-btn" tabindex="-1" id="modal-a">
+		<div class="am-modal-dialog">
+			<div class="am-modal-hd">
+				error
+				<a onclick="modalClose()" class="am-close am-close-spin">&times;</a>
+			</div>
+			<div class="am-modal-bd">
+				context
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+$('#btn-back').click(function(){
+	
+});
+$('#btn-pay').click(function(){
+	
+});
+$('#btn-eva').click(function(){
+	
+});
+$('#btn-cancel').click(function(){
+	
+});
+</script>
+</html>

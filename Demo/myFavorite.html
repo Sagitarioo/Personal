@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>收藏</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="AmazeUI-2.7.2/assets/css/amazeui.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<style type="text/css">
+	html,body{
+		overflow: hidden;
+		overflow-y: auto;
+	}
+	.show-title-text{
+		height: 40px;
+		line-height: 40px;
+		background-color: #108df0;
+	}
+	.stt-name{
+		font-size: 18px;
+		font-weight:500; 
+		color: #fff;
+	}
+	.snt-a1{
+		float: left;
+		width: 10%;
+		padding-left: 4px;
+	}
+	.am-icon-chevron-left{
+		color: #fff;
+	}
+	.snt-a2{
+		float: left;
+		width: 80%;
+		text-align: center;
+	}
+	.select-tab{
+		height: 30px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.stt-a1{
+		width:50%;
+		height: 30px;
+		float: left;
+		text-align: center;
+	}
+	.line1{
+		border-bottom: 4px solid #108df0;
+	}
+	#barA{
+		color: #108df0;
+	}
+	/*show-first-start*/
+	.mid-show{
+		float: left;
+		width: 100%;
+		background-color: #fff;
+	}
+	.show-border{
+		border: 2px solid #f1f1f1;
+	}
+	.mid-show-lt{
+		width: 50%;
+		float: left;
+		background-color: #fff;
+	}
+	.nav-icon{
+		text-align: center;
+		margin: 4px;
+		height: 40vw;
+	}
+	.nav-text{
+		/*text-align: center;*/
+	}
+	.nt-a{
+		float: left;
+		font-size: 20px;
+		margin-left: 4px;
+		margin-right: 10px;
+		margin-top: -5px;
+	}
+	.nt-b{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	.ms-pic{
+		width: 100%;
+		height: 100%;
+	}
+	/*show-first-end*/
+	.superBox{
+		position: absolute;
+		height: 20vw;
+	}
+	.mainBox{
+		position: absolute;
+		float: left;
+	}
+	.tdivs{
+		touch-action:none;
+		position: relative;
+		float: left;
+	}		
+	/*list*/
+	.shop-list{
+		border-top: 1px solid #e3e3e3;
+		border-bottom: 1px solid #e3e3e3;
+		float: left;
+	}
+	.show-pic{
+		position: relative;
+		float: left;
+		width: 20%;
+		height: 20vw;
+	}
+	.show-text-a{
+		float: left;
+		width: 60%;
+		height: 20vw;
+	}
+	.show-text-b{
+		float: left;
+		width: 20%;
+		height: 20vw;
+	}
+	.shop-img{
+		width: 100%;
+		height: 20vw;
+	}
+	.sta-top{
+		width: 100%;
+		margin-top: 8%;
+		padding-left: 10px;
+	}
+	.sta-middle{
+		width: 100%;
+		padding-left: 10px;
+	}
+	.stb-top{
+		text-align: center;
+		line-height: 20vw;
+	}
+	.am-icon-ellipsis-h{
+		color: #969696;
+	}	
+	.contains{
+		height: 20vw;
+		margin-top: 4px;
+	}
+	.attent{
+		width: 50%;
+		height: 20vw;
+		float: left;
+		text-align: center;
+		line-height: 20vw;
+		color: #fff;
+	}
+	.attentionA{
+		background-color: #0e90d2;
+	}
+	.attentionB{
+		background-color: #dd514c;
+	}
+	</style>
+</head>
+<body>
+<div class="show-title-text">
+	<div id="btn-back" class="snt-a1"><i class="am-icon-chevron-left am-icon-sm"></i></div>
+	<div class="snt-a2"><span class="stt-name">我的收藏</span></div>
+	<div class="snt-a1"></div>
+</div> 
+<div class="select-tab">
+	<div class="stt-a1 line1" id="barA">
+		宝贝
+	</div>
+	<div class="stt-a1 line2" id="barB">
+		店铺
+	</div>
+</div>
+<div class="show-first">
+	<div class="mid-show">
+		<div class="mid-show-lt show-border">
+			<div class="nav-icon">
+				<img src="img/img11.jpg" alt="goods" class="ms-pic">
+			</div>
+			<div class="nav-text">
+				<div class="nt-a">¥ 100</div>
+				<div class="nt-b">goodsList.item</div>
+			</div>
+		</div>
+		<div class="mid-show-lt show-border" onclick="goodsDet()">
+			<div class="nav-icon">
+				<img src="img/img12.jpg" alt="goods" class="ms-pic">
+			</div>
+			<div class="nav-text">
+				<div class="nt-a">¥ 89</div>
+				<div class="nt-b">goodsList.item</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="show-second">
+	<div class="contains" id="ect1">
+		<div class="superBox superBox1">
+			<div class="mainBox mainBox1">
+				<div class="tdiv1 tdivs">
+					<div class="shop-list">
+						<div class="show-pic">
+							<img src="img/img13.jpg" class="shop-img">
+						</div>
+						<div class="show-text-a">
+							<div class="sta-top">
+								<span class="shop-name">restaurant</span>
+							</div>
+							<div class="sta-middle">
+								<span>this is a slogan</span>
+							</div>
+						</div>
+						<div class="show-text-b">
+							<div class="stb-top" onclick="showBar(1)">
+								<i class="am-icon-ellipsis-h am-icon-md"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tdiv2 tdivs">
+					<div class="attentionA attent">
+						特别关注
+					</div>
+					<div class="attentionB attent">
+						取消关注
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="contains" id="ect2">
+		<div class="superBox superBox2">
+			<div class="mainBox mainBox2">
+				<div class="tdiv1 tdivs">
+					<div class="shop-list">
+						<div class="show-pic">
+							<img src="img/img14.jpg" class="shop-img">
+						</div>
+						<div class="show-text-a">
+							<div class="sta-top">
+								<span class="shop-name">restaurant</span>
+							</div>
+							<div class="sta-middle">
+								<span>this is a slogan</span>
+							</div>
+						</div>
+						<div class="show-text-b">
+							<div class="stb-top" onclick="showBar(2)">
+								<i class="am-icon-ellipsis-h am-icon-md"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tdiv2 tdivs">
+					<div class="attentionA attent">
+						特别关注
+					</div>
+					<div class="attentionB attent">
+						取消关注
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+$('#barA').click(function(){
+	$('.show-first').show();
+	$('.show-second').hide();
+	$('.line2').css("border-bottom","4px solid #fff");
+	$('.line1').css("border-bottom","4px solid #108df0");
+	$('#barA').css("color","#108df0");
+	$('#barB').css("color","#000");
+});
+$('#barB').click(function(){
+	$('.show-second').show();
+	$('.show-first').hide();
+	$('.line1').css("border-bottom","4px solid #fff");
+	$('.line2').css("border-bottom","4px solid #108df0");
+	$('#barA').css("color","#000");
+	$('#barB').css("color","#108df0");
+});
+$(function(){
+	$('.show-first').show();
+	$('.show-second').hide();
+	$(window).resize();
+	$('.tdiv1').css({"width":widthDw});
+	$('.superBox').css({"width":widthDw*1.4});
+	$('.mainBox').css({"width":widthDw*1.4});
+	$('.tdiv2').css({"width":widthDw*0.4});
+});
+var widthDw=0;
+$(window).resize(function(){
+	widthDw=$(window).width();
+});
+$('.contains').on("swipeleft",function(e){
+	var n = parseInt($(this).attr("id").substring(3));
+	if(n!=""&&!isNaN(n)){
+		showBar(n)
+	}
+});
+$('.contains').on("swiperight",function(e){
+	var n = parseInt($(this).attr("id").substring(3));
+	if(n!=""&&!isNaN(n)){
+		hideBar(n);
+	}
+});
+var flag=true;
+function showBar(i){
+	if(flag==true){
+		$('.superBox'+i).css({"width":widthDw*1.4});
+		$('.mainBox'+i).css({"width":widthDw*1.4});
+		$('.mainBox'+i).animate({right:widthDw*0.4},800);
+		flag=false;
+	}else{
+		hideBar(i);
+		flag=true;
+	}
+	
+}
+function hideBar(i){
+	$('.mainBox'+i).animate({right:0},800);
+}
+$('#btn-back').click(function(){
+	window.location.href="myInfo.html";
+});
+</script>
+</html>

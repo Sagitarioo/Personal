@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="AmazeUI-2.7.2/assets/css/amazeui.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script src="AmazeUI-2.7.2/assets/js/amazeui.min.js"></script>
+	<link rel="stylesheet" href="city-dist/css/LArea.css">
+	<script src="city-dist/js/LAreaData1.js"></script>
+    <script src="city-dist/js/LAreaData2.js"></script>
+    <script src="city-dist/js/LArea.js"></script>
+	<style type="text/css">
+	.show-title-text{
+		height: 40px;
+		line-height: 40px;
+		background-color: #108df0;
+	}
+	.stt-name{
+		font-size: 18px;
+		font-weight:500; 
+		color: #fff;
+	}
+	.snt-a1{
+		float: left;
+		width: 10%;
+		padding-left: 4px;
+	}
+	.am-icon-chevron-left{
+		color: #fff;
+	}
+	.snt-a2{
+		float: left;
+		width: 80%;
+		text-align: center;
+	}
+	.si-mtp{
+		margin-top: 20px;
+		height: 30px;
+	}
+	.si-line{
+		width: 96%;
+		height: 1px;
+		margin: 4px auto;
+		background-color: #e3e3e3;
+	}
+	.center-box{
+		width: 100%;
+	}
+	.am-btn{
+		width: 100%;
+		border-radius: 2px;
+	}
+	.show-btn{
+		width: 96%;
+		margin: 20px auto;
+	}
+	.s-clear{
+		float: right;
+		margin-top: -26px;
+		margin-right: 10px;
+	}
+	.am-icon-close{
+		color: #dcdcdc;
+	}
+
+	.t-left{
+		float: left;
+		width: 15%;
+		margin-left: 5%; 
+		height: 30px;
+	}
+	.t-right{
+		float: left;
+		width: 80%;
+		height: 30px;
+	}
+	.in-t{
+		margin-left: 2%;
+		width: 90%;
+		border: none;
+	}
+	#radios{
+		margin-left: 20px;
+	}
+	.error-msg{
+		margin-left: 20%;
+		color: #f00;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="show-title-text">
+		<div id="btn-back" class="snt-a1"><span class="am-icon-chevron-left am-icon-sm"><span></div>
+		<div class="snt-a2"><span class="stt-name">个人资料</span></div>
+		<div class="snt-a1"></div>
+	</div> 
+	<div class="center-box" id="showPage">
+		<div class="si-mtp si-high">
+			<div class="t-left"><span>账号</span></div>
+			<div class="t-right"><span>12345678999</span></div>
+		</div>
+		<div class="si-line"></div>
+		<div class="si-mtp si-high">
+			<div class="t-left"><span>邮箱</span></div>
+			<div class="t-right"><span>test@qq.com</span></div>
+		</div>
+		<div class="error-msg errorMail"></div>
+		<div class="si-line"></div>
+		<div class="si-mtp si-high">
+			<div class="t-left"><span>手机号</span></div>
+			<div class="t-right">12345678999</div>
+		</div>
+		<div class="si-line"></div>
+		<div class="si-mtp si-high">
+			<div class="t-left"><span>姓名</span></div>
+			<div class="t-right"><span>test</span></div>
+		</div>
+		<div class="error-msg errorName"></div>
+		<div class="si-line"></div>
+		<div class="si-mtp si-high">
+			<div class="t-left"><span>性别</span></div>
+			<div class="t-right">
+				<input type="radio" name="sex" checked="checked" value="m">男
+				<input type="radio" name="sex" value="w" id="radios">女	      	
+		  	</div>
+		</div>
+		<div class="si-line"></div>
+		<div class="si-mtp si-high">
+			<div class="t-left"><span>认证</span></div>
+			<div class="t-right"><span>未认证</span></div>
+		</div>
+		<div class="si-line"></div>
+		<div class="si-mtp si-high">
+			<div class="t-left"><span>地址</span></div>
+			<div class="t-right"><span>广东省深圳市</span></div>
+		</div>
+		<div class="error-msg errorCity"></div>
+		<div class="si-line"></div>
+		<div class="si-mtp si-high">
+			<div class="t-left"><span>详细</span></div>
+			<div class="t-right"><span>xx avenue</span></div>
+		</div>
+		<div class="error-msg errorAddress"></div>
+		<div class="si-line"></div>
+		<div class="si-mtp si-high">
+			<div class="t-left"><span>邮编</span></div>
+			<div class="t-right"><span>123456</span></div>
+		</div>
+		<div class="error-msg errorPostcode"></div>
+		<div class="si-line"></div>
+		<div class="show-btn">
+			<button type="button" class="am-btn am-btn-danger" id="btn-update">
+				<i class="am-icon-cog"></i>&nbsp;修改
+			</button>
+		</div>
+	</div>
+	<div class="center-box" id="editPage">
+		<div class="si-mtp si-high">
+			<div class="t-left"><span>账号</span></div>
+			<div class="t-right"><input type="text" name="account" class="in-t" placeholder="账户名/手机号/Email" readonly="readonly"></div>
+		</div>
+		<div class="si-line"></div>
+		<div class="si-mtp si-high">
+			<div class="t-left"><span>邮箱</span></div>
+			<div class="t-right"><input type="text" name="mail" class="in-t" placeholder="Email"></div>
+			<div id="clear-mail" class="s-clear"><span class="am-icon-close am-icon-sm"></span></div>
+		</div>
+		<div class="error-msg errorMail"></div>
+		<div class="si-line"></div>
+		<div class="si-mtp si-high">
+			<div class="t-left"><span>手机号</span></div>
+			<div class="t-right"><input type="text" name="phone" class="in-t" placeholder="手机号" readonly="readonly"></div>
+		</div>
+		<div class="si-line"></div>
+		<div class="si-mtp si-high">
+			<div class="t-left"><span>姓名</span></div>
+			<div class="t-right"><input type="text" name="username" class="in-t" placeholder="姓名"></div>
+			<div id="clear-username" class="s-clear"><span class="am-icon-close am-icon-sm"></span></div>
+		</div>
+		<div class="error-msg errorName"></div>
+		<div class="si-line"></div>
+		<div class="si-mtp si-high">
+			<div class="t-left"><span>性别</span></div>
+			<div class="t-right">
+				<input type="radio" name="sexs" checked="checked" value="男">男
+				<input type="radio" name="sexs" value="女" id="radios">女	      	
+		  	</div>
+		</div>
+		<div class="si-line"></div>
+		<div class="si-mtp si-high">
+			<div class="t-left"><span>认证</span></div>
+			<div class="t-right"><input type="text" name="idcard" class="in-t" placeholder="ID认证" readonly="readonly"></div>
+		</div>
+		<div class="si-line"></div>
+		<div class="si-mtp si-high">
+			<div class="t-left"><span>地址</span></div>
+			<div class="t-right"><input id="demo2" type="text" name="city" class="in-t" placeholder="地址"></div>
+		</div>
+		<div class="error-msg errorCity"></div>
+		<div class="si-line"></div>
+		<div class="si-mtp si-high">
+			<div class="t-left"><span>详细</span></div>
+			<div class="t-right"><input type="text" name="address" class="in-t" placeholder="详细地址"></div>
+			<div id="clear-address" class="s-clear"><span class="am-icon-close am-icon-sm"></span></div>
+		</div>
+		<div class="error-msg errorAddress"></div>
+		<div class="si-line"></div>
+		<div class="si-mtp si-high">
+			<div class="t-left"><span>邮编</span></div>
+			<div class="t-right"><input type="text" name="postcode" class="in-t" placeholder="邮编"></div>
+			<div id="clear-postcode" class="s-clear"><span class="am-icon-close am-icon-sm"></span></div>
+		</div>
+		<div class="error-msg errorPostcode"></div>
+		<div class="si-line"></div>
+		<div class="show-btn">
+			<button type="button" class="am-btn am-btn-success" id="btn-save">
+				<i class="am-icon-check"></i>&nbsp;保存
+			</button>
+		</div>
+		<div class="show-btn">
+			<button type="button" class="am-btn am-btn-warning" id="btn-cancel">
+				<i class="am-icon-close"></i>&nbsp;取消
+			</button>
+		</div>
+	</div>
+	<div class="am-modal am-modal-no-btn" tabindex="-1" id="modal-a">
+		<div class="am-modal-dialog">
+			<div class="am-modal-hd">
+				error
+				<a onclick="modalClose()" class="am-close am-close-spin">&times;</a>
+			</div>
+			<div class="am-modal-bd">
+				context
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+$(function(){
+	citySel();
+	$('#editPage').hide();
+
+});
+$('#btn-back').click(function(){
+	window.location.href="myInfo.html";
+});
+$('#clear-mail').click(function(){
+	$("input[name='mail']").val("");
+});
+$('#clear-username').click(function(){
+	$("input[name='username']").val("");
+});
+$('#clear-address').click(function(){
+	$("input[name='address']").val("");
+});
+$('#clear-postcode').click(function(){
+	$("input[name='postcode']").val("");
+});
+
+$('#btn-update').click(function(){
+	$('#showPage').hide();
+	$('#editPage').show();
+});
+$('#btn-cancel').click(function(){
+	$('#showPage').show();
+	$('#editPage').hide();
+});
+function modalClose(){
+	$('#modal-a').modal('close');
+}
+function citySel(){
+	var area2 = new LArea();
+    area2.init({
+        'trigger': '#demo2',
+        'valueTo': '#value2',
+        'keys': {
+            id: 'value',
+            name: 'text'
+        },
+        'type': 2,
+        'data': [provs_data, citys_data, dists_data]
+    });
+}
+
+$("input[name='username']").blur(function(){
+	var str=$("input[name='username']").val();
+	if(!isName(str)){
+		$('.errorName').html("");
+		$('.errorName').show();
+		$('.errorName').append("格式为2-20位汉字或字母");
+		$('#btn-save').attr("disabled","disabled");
+	}else{
+		$('.errorName').hide();
+		$('#btn-save').removeAttr("disabled");
+	}
+});
+$("input[name='mail']").blur(function(){
+	var str=$("input[name='mail']").val();
+	if(!isMail(str)){
+		$('.errorMail').html("");
+		$('.errorMail').show();
+		$('.errorMail').append("格式有误");
+		$('#btn-save').attr("disabled","disabled");
+	}else{
+		$('.errorMail').hide();
+		$('#btn-save').removeAttr("disabled");
+	}
+});
+$("input[name='postcode']").blur(function(){
+	var str=$("input[name='postcode']").val();
+	if(!isPostcode(str)){
+		$('.errorPostcode').html("");
+		$('.errorPostcode').show();
+		$('.errorPostcode').append("格式为6位数字");
+		$('#btn-save').attr("disabled","disabled");
+	}else{
+		$('.errorPostcode').hide();
+		$('#btn-save').removeAttr("disabled");
+	}
+});
+$("input[name='city']").blur(function(){
+	var str=$("input[name='city']").val();
+	if(str==""){
+		$('.errorCity').html("");
+		$('.errorCity').show();
+		$('.errorCity').append("请选择所在区域");
+		$('#btn-save').attr("disabled","disabled");
+	}else{
+		$('.errorCity').hide();
+		$('#btn-save').removeAttr("disabled");
+	}
+});
+$("input[name='address']").blur(function(){
+	var str=$("input[name='address']").val();
+	if(!isAddress(str)){
+		$('.errorAddress').html("");
+		$('.errorAddress').show();
+		$('.errorAddress').append("格式为4-60位汉字或字母或数字");
+		$('#btn-save').attr("disabled","disabled");
+	}else{
+		$('.errorAddress').hide();
+		$('#btn-save').removeAttr("disabled");
+	}
+});
+function isMail(str){
+	/*var reg=/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;*/
+	// var reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+	var reg = /^([a-zA-Z0-9_-])+@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+    return reg.test(str);
+}
+function isPostcode(str) {
+    var reg=/^[0-9]{6}$/;   
+    return reg.test(str);     
+}
+function isTel(str) {
+	var reg=/^1\d{10}$/;
+	return reg.test(str);
+}
+function isName(str) {
+	var reg= /[a-zA-Z0-9\u4E00-\u9FA5]{2,20}$/;
+	return reg.test(str);
+}
+function isAddress(str) {
+	var reg= /[a-zA-Z0-9-#\u4E00-\u9FA5]{4,60}$/;
+	return reg.test(str);
+}
+</script>
+</html>

@@ -14,7 +14,6 @@
 		float: left;
 		width: 20%;
 		height: 20vw;
-		/*height: 100px;*/
 	}
 	.show-text{
 		width: 100%;
@@ -52,6 +51,7 @@
 	.shop-name-text{
 		height: 40px;
 		line-height: 40px;
+		border-bottom: 1px solid #e3e3e3;
 	}
 	#shop-name{
 		font-size: 18px;
@@ -102,10 +102,25 @@
 	}
 
 	#inNum{
-		height: 30px;
-		line-height: 30px;
+		height: 28px;
+		line-height: 28px;
 		margin-top: -2px;
 		width: 30px;
+	}
+	.goods-item-2{
+		float: left;
+	}
+	.goods-item-3{
+		float: right;
+		margin-top: -10px;
+	}
+	.red-f{
+		color: #FF3F30;
+	}
+	.goods-item-tit{
+		height: 30px;
+		width: 100%;
+		line-height: 30px;
 	}
 	</style>
 </head>
@@ -115,7 +130,13 @@
 		<div class="snt-a2"><span id="shop-name">restaurant</span></div>
 		<div class="snt-a1"></div>
 	</div>
+
 	<div class="ticket-detail">
+		<div class="goods-item-tit">
+			<div class="gi-left">
+				<input type="checkbox" name="buyAll" id="buyAll">店铺名称
+			</div>			
+		</div>
 		<div class="shop-list">
 			<div class="show-pic">
 				<img src="img/img11.jpg" class="shop-img">
@@ -123,7 +144,7 @@
 			<div class="show-text">
 				<div class="show-text-top">
 					<div class="top-left1 text-float-left">
-						<span class="goods-name">88代100元券</span>
+						<span class="goods-name">商品名称</span>
 					</div>
 					<div class="top-left2">
 						<span>¥ </span><span id="goods-price">88</span>
@@ -131,35 +152,78 @@
 				</div>
 				<div class="show-text-middle">
 					<div class="middle-left1 text-float-left">
-						<span>周一至周日</span>&nbsp;|&nbsp;<span>部分可用</span>&nbsp;|&nbsp;<span>免预约</span>&nbsp;|&nbsp;<span>可叠加2张</span>
+						<span class="am-icon-check-circle-o am-icon-sm"></span><span> 包邮</span>
+						<span class="am-icon-check-circle-o am-icon-sm"></span><span> 7天退换</span>
 					</div>
 				</div>
-				<div class="show-text-bottom text-float-left">
-					<span class="am-icon-check-circle-o am-icon-sm"></span><span> 随时退</span>
-					<span class="am-icon-check-circle-o am-icon-sm"></span><span> 过期自动退</span>
+				<div class="show-text-bottom">
+					<div class="goods-item-2">
+						<div class="gi-left">
+							小计 <span class="red-f">¥ </span><span class="red-f" id="goods-price-s1">88</span>
+						</div>
+					</div>
+					<div class="goods-item-3">
+						<div class="gi-right">
+							数量 
+							<i class="am-icon-minus-circle am-icon-sm" onclick="minusNum()"></i>
+							<input type="text" name="inNum" id="inNum" value="1" disabled="disabled">
+							<i class="am-icon-plus-circle am-icon-sm" onclick="addNum()"></i>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
+		
+		<div class="gi-shadow"></div>		
 	</div>
-	<div class="goods-item">
-		<div class="gi-left">
-			数量
+
+	<div class="ticket-detail">
+		<div class="goods-item-tit">
+			<div class="gi-left">
+				<input type="checkbox" name="buyAll" id="buyAll">店铺名称
+			</div>			
 		</div>
-		<div class="gi-right">
-			<i class="am-icon-minus-circle am-icon-sm" id="minusNum"></i>
-			<input type="text" name="inNum" id="inNum" value="1" disabled="disabled">
-			<i class="am-icon-plus-circle am-icon-sm" id="addNum"></i>
+		<div class="shop-list">
+			<div class="show-pic">
+				<img src="img/img11.jpg" class="shop-img">
+			</div>
+			<div class="show-text">
+				<div class="show-text-top">
+					<div class="top-left1 text-float-left">
+						<span class="goods-name">商品名称</span>
+					</div>
+					<div class="top-left2">
+						<span>¥ </span><span id="goods-price">88</span>
+					</div>
+				</div>
+				<div class="show-text-middle">
+					<div class="middle-left1 text-float-left">
+						<span class="am-icon-check-circle-o am-icon-sm"></span><span> 包邮</span>
+						<span class="am-icon-check-circle-o am-icon-sm"></span><span> 7天退换</span>
+					</div>
+				</div>
+				<div class="show-text-bottom">
+					<div class="goods-item-2">
+						<div class="gi-left">
+							小计 <span class="red-f">¥ </span><span class="red-f" id="goods-price-s1">88</span>
+						</div>
+					</div>
+					<div class="goods-item-3">
+						<div class="gi-right">
+							数量 
+							<i class="am-icon-minus-circle am-icon-sm" onclick="minusNum()"></i>
+							<input type="text" name="inNum" id="inNum" value="1" disabled="disabled">
+							<i class="am-icon-plus-circle am-icon-sm" onclick="addNum()"></i>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+		
+		<div class="gi-shadow"></div>		
 	</div>
-	<div class="goods-item">
-		<div class="gi-left">
-			小计
-		</div>
-		<div class="gi-right">
-			<span>¥ </span><span id="goods-price-s1">88</span>
-		</div>
-	</div>
-	<div class="gi-shadow"></div>
+	
+	<!-- <div class="gi-shadow"></div> -->
 	<div class="goods-item">
 		<div class="gi-left">
 			抵用券
@@ -197,15 +261,15 @@ $('#btn-back').click(function(){
 $('#btn-sub').click(function(){
 	window.location.href="orderList.html";
 });
-$('#addNum').click(function(){
-	var s=parseInt($('#inNum').val())+1;
-	$('#inNum').val(s);
+function addNum(i){
+	var s=parseInt($('#inNum'+i).val())+1;
+	$('#inNum'+i).val(s);
 	var s1=s*s0;
-	$('#goods-price-s1').html(s1);
-	$('#goods-price-s2').html(s1);
-	$('#goods-price-s3').html(s1);
-});
-$('#minusNum').click(function(){
+	$('#goods-price-s1'+i).html(s1);
+	$('#goods-price-s2'+i).html(s1);
+	$('#goods-price-s3'+i).html(s1);
+};
+function minusNum(){
 	var s=parseInt($('#inNum').val())-1;
 	if(s>0){
 		$('#inNum').val(s);
@@ -214,7 +278,7 @@ $('#minusNum').click(function(){
 		$('#goods-price-s2').html(s1);
 		$('#goods-price-s3').html(s1);
 	}
-});
+};
 
 </script>
 </html>
